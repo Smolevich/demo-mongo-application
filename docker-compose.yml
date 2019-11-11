@@ -1,0 +1,31 @@
+version: '3.7'
+
+services:
+  php:
+    build:
+      context: .
+      dockerfile: ./docker/php/Dockerfile
+    environment:
+      DB_HOST: mongo
+      DB_USERNAME: root
+      DB_PASSWORD: root
+      DB_DATABASE: application
+      DB_PORT: 27017
+      DB_CONNECTION: mongodb
+    volumes:
+      - ./:/var/www/html
+  nginx:
+    image: nginx:alpine
+    volumes:
+      - ./docker/nginx/:/etc/nginx/conf.d/:ro
+      - .:/var/www/html
+    ports:
+      - "82:80"
+    environment:
+      - NGINX_HOST=demo-mongo-aloc
+      - NGINX_PORT=80
+  mongo:
+    image: mongo
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: root
