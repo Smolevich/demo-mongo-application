@@ -14,18 +14,28 @@ services:
       DB_CONNECTION: mongodb
     volumes:
       - ./:/var/www/html
+    networks:
+      - traefik_proxy
   nginx:
     image: nginx:alpine
     volumes:
       - ./docker/nginx/:/etc/nginx/conf.d/:ro
       - .:/var/www/html
-    ports:
-      - "82:80"
-    environment:
-      - NGINX_HOST=demo-mongo-aloc
-      - NGINX_PORT=80
+    networks:
+      - traefik_proxy
+    depends_on:
+      - php
+    labels:
+      - "traefik.http.routers.nginx.rule=Host(`demo-mongo-app.docker.localhost`)"
+      - "traefik.http.routers.nginx.entrypoints=web"
   mongo:
     image: mongo
     environment:
       MONGO_INITDB_ROOT_USERNAME: root
       MONGO_INITDB_ROOT_PASSWORD: root
+
+networks:
+  traefik_proxy:
+    external:
+      # change if network traefik has another name
+      name: traefik_proxy
