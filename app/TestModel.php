@@ -9,6 +9,8 @@ class TestModel extends Model
     public $collection = 'test';
     public $connection = 'mongodb';
     public $fillable = [
-        'name'
+        'name',
+        'field_1',
+        'field_2',
     ];
 }
