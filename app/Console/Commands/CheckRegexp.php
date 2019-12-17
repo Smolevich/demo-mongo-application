@@ -21,9 +21,13 @@ class CheckRegexp extends Command
             [
                 'name' => $name,
                 'field_1' => 'sh',
+                'field_2' => 'test'
             ]
         );
-        $model = TestModel::where('name', $name)->where('field_1', 'regexp', "/sh/i")->first();
+        $model = TestModel::where('name', $name)
+            ->where('field_1', 'regexp', "/sh/i")
+            ->where('field_2', 'test')
+            ->first();
         $this->output->writeln('Id attribute '. $model->getIdAttribute());
     }
 }
