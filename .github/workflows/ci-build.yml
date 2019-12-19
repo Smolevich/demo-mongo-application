@@ -44,8 +44,8 @@ jobs:
           DB_PASSWORD: root
           DB_DATABASE: application
       - name: Run test console command
-        run:
-          php artisan geo:index
+        run: |
+          php${{ matrix.php }} artisan geo:index
         env:
           DB_HOST: 0.0.0.0
           DB_PORT: 27017
