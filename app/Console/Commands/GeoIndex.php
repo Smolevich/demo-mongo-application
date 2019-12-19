@@ -59,7 +59,6 @@ class GeoIndex extends Command
             }
 
         } catch (Throwable $t) {
-            $queries = DB::getQueryLog();
             dd($t);
         }
     }
