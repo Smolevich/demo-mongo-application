@@ -43,3 +43,6 @@ jobs:
           DB_USERNAME: root
           DB_PASSWORD: root
           DB_DATABASE: application
+      - name: Run test console command
+        run:
+          php artisan geo:index
