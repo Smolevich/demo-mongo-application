@@ -4,7 +4,6 @@ namespace App\Console\Commands;
 
 use App\ProductModel;
 use Illuminate\Console\Command;
-use Illuminate\Support\Facades\DB;
 use Throwable;
 
 class GeoIndex extends Command
