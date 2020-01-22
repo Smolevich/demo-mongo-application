@@ -30,6 +30,10 @@ services:
       - "traefik.http.routers.nginx.entrypoints=web"
   mongo:
     image: mongo
+    ports:
+      - 27017:27017
+    networks:
+      - traefik_proxy
     environment:
       MONGO_INITDB_ROOT_USERNAME: root
       MONGO_INITDB_ROOT_PASSWORD: root
