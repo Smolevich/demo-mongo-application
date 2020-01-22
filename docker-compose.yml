@@ -32,9 +32,6 @@ services:
     image: mongo
     ports:
       - 27017:27017
-    labels:
-      - "traefik.http.routers.nginx.rule=Host(`mongodb.docker.localhost`)"
-      - "traefik.http.routers.nginx.entrypoints=web"
     networks:
       - traefik_proxy
     environment:
