@@ -7,6 +7,8 @@ use Jenssegers\Mongodb\Eloquent\Model;
 class Post extends Model
 {
     protected $collection ='posts';
+    protected $connection ='mongodb';
+
     protected $fillable = [
         'owner_id',
         'group_id',
