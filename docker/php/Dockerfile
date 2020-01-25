@@ -86,3 +86,4 @@ WORKDIR $HOME
 # setting the default user into the working dir
 USER root
 COPY ./ $HOME
+COPY --from=composer:latest /usr/bin/composer /usr/local/bin/composer
