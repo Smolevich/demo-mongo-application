@@ -8,10 +8,10 @@ on:
 
 jobs:
   build:
-    runs-on: ${{ matrix.os}}
+    runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: ['ubuntu:latest']
+        os: ['ubuntu-latest']
         php: ['7.2', '7.3', '7.4']
         mongodb: ['4.0', '4.2']
     services:
