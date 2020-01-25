@@ -47,7 +47,7 @@ RUN ln -s /usr/lib/x86_64-linux-gnu/libsybdb.a /usr/lib/
 RUN apt-get update -y \
 	&& apt-get install -y libmcrypt-dev \
 	&& rm -rf /var/lib/apt/lists/* \
-	&& pecl install mcrypt-1.0.2 \
+	&& pecl install mcrypt-1.0.3 \
 	&& docker-php-ext-enable mcrypt
 
 
