@@ -28,11 +28,16 @@ services:
     labels:
       - "traefik.http.routers.nginx.rule=Host(`demo-mongo-app.docker.localhost`)"
       - "traefik.http.routers.nginx.entrypoints=web"
+
   mongo:
     image: mongo
+    ports:
+      - 27017:27017
     environment:
       MONGO_INITDB_ROOT_USERNAME: root
       MONGO_INITDB_ROOT_PASSWORD: root
+    networks:
+      - traefik_proxy
 
 networks:
   traefik_proxy:
