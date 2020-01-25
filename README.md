@@ -1,11 +1,48 @@
 # demo-mongo-application
 
+This repository was created for testing library https://github.com/jenssegers/laravel-mongodb
+If you have to test something with library laravel-mongodb you can fork this repo (or mention me and i create branch)
+
+
+- [Installing](#installing)
+  - [Traefik](#traefik)
+
 ## Installing
+
 Run `docker-compose up -d`
 
-## Test work with database
-1. Install dependencies `docker-compose exec php bash -c "composer install"`
-2. Enter in container with php `docker-composer exec php bash`
-3. Run artisan tinker `php artisan tinker`
-4. Create eloquent model `App\TestModel::create(['name' => 'Test #2'])`
-5. Check that model successfully was created `App\TestModel::first()`
+## Traefik
+
+[Docs](https://docs.traefik.io/)
+
+You can install traefik in separate docker container and add containers in docker-compose.yml to network which traefil uses(for example traefik_proxy)
+
+Example of `docker-compose.yml` for traefik
+
+```yml
+version: '3.7'
+
+services:
+  traefik:
+    container_name: traefik
+    image: traefik:v2.0
+    restart: always
+    networks:
+     - default
+     - traefik_proxy
+    command:
+      - "--log.level=DEBUG"
+      - "--providers.docker=true"
+    volumes:
+      - ./traefik.yml:/etc/traefik/traefik.yml
+      - /var/run/docker.sock:/var/run/docker.sock
+    ports:
+      - "80:80"
+      - "8080:8080"
+
+networks:
+  traefik_proxy:
+    driver: bridge
+    name: traefik_proxy
+
+```

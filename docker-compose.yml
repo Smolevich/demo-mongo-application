@@ -5,6 +5,7 @@ services:
     build:
       context: .
       dockerfile: ./docker/php/Dockerfile
+    container_name: "${PROJECT_NAME}_php"
     environment:
       DB_HOST: mongo
       DB_USERNAME: root
@@ -12,12 +13,15 @@ services:
       DB_DATABASE: application
       DB_PORT: 27017
       DB_CONNECTION: mongodb
+      APP_URL: http://demo-mongo-app.docker.localhost
+      MAIL_DRIVER: log
     volumes:
       - ./:/var/www/html
     networks:
       - traefik_proxy
   nginx:
     image: nginx:alpine
+    container_name: "${PROJECT_NAME}_nginx"
     volumes:
       - ./docker/nginx/:/etc/nginx/conf.d/:ro
       - .:/var/www/html
@@ -26,7 +30,7 @@ services:
     depends_on:
       - php
     labels:
-      - "traefik.http.routers.nginx.rule=Host(`demo-mongo-app.docker.localhost`)"
+      - "traefik.http.routers.${PROJECT_NAME}_nginx.rule=Host(`demo-mongo-app.docker.localhost`)"
       - "traefik.http.routers.nginx.entrypoints=web"
 
   mongo:
