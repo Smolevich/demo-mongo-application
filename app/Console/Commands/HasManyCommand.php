@@ -27,6 +27,14 @@ class HasManyCommand extends Command
             ]
         );
         Comment::create(['title' => 'Comment #1', 'author' => 'Author #1', 'post_id' => $post->getAttributes()['_id']]);
-        dd($post->comments, DB::getQueryLog());
+        $comments = Merchant::find($post->getAttributes()['_id'])->comments;
+        if (!$comments->count()) {
+            $this->output->writeln('Comments not found');
+        } else {
+            foreach ($comments as $comment) {
+                $this->output->writeln('Id of the comment: '  . (string) $comment->_id);
+            }
+        }
+        dd(DB::getQueryLog());
     }
 }
