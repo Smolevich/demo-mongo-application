@@ -6,6 +6,7 @@ services:
       context: .
       dockerfile: ./docker/php/Dockerfile
     container_name: "${PROJECT_NAME}_php"
+    restart: always
     environment:
       DB_HOST: mongo
       DB_USERNAME: root
@@ -21,6 +22,7 @@ services:
       - traefik_proxy
   nginx:
     image: nginx:alpine
+    restart: always
     container_name: "${PROJECT_NAME}_nginx"
     volumes:
       - ./docker/nginx/:/etc/nginx/conf.d/:ro
@@ -35,6 +37,7 @@ services:
 
   mongo:
     image: mongo
+    restart: always
     ports:
       - 27017:27017
     environment:
