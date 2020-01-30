@@ -5,6 +5,7 @@ namespace App\Console\Commands;
 use App\Comment;
 use App\Merchant;
 use Illuminate\Console\Command;
+use Illuminate\Support\Facades\DB;
 
 class HasManyCommand extends Command
 {
@@ -13,6 +14,7 @@ class HasManyCommand extends Command
     protected $description = 'Check work with relation HasMany ';
     public function handle()
     {
+        DB::enableQueryLog();
         Merchant::truncate();
         Comment::truncate();
 
@@ -24,6 +26,7 @@ class HasManyCommand extends Command
                 'country' => 'USA'
             ]
         );
-        Comment::create(['title' => 'Comment #1', 'author' => 'Author #1', 'post_id' => $post->_id]);
+        Comment::create(['title' => 'Comment #1', 'author' => 'Author #1', 'post_id' => $post->getAttributes()['_id']]);
+        dd($post->comments, DB::getQueryLog());
     }
 }
