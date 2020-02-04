@@ -6,6 +6,13 @@ on:
     tags:
   pull_request:
 
+env:
+  DB_HOST: 0.0.0.0
+  DB_PORT: 27017
+  DB_CONNECTION: mongodb
+  DB_USERNAME: root
+  DB_PASSWORD: root
+  DB_DATABASE: application
 jobs:
   build:
     runs-on: ${{ matrix.os }}
@@ -41,20 +48,8 @@ jobs:
       - name: Run database migrations
         run: |
           php${{ matrix.php }} artisan migrate
-        env:
-          DB_HOST: 0.0.0.0
-          DB_PORT: 27017
-          DB_CONNECTION: mongodb
-          DB_USERNAME: root
-          DB_PASSWORD: root
-          DB_DATABASE: application
+      - name: Run tests
+        run: ./vendor/bin/phpunit
       - name: Run test console command
         run: |
           php${{ matrix.php }} artisan geo:index
-        env:
-          DB_HOST: 0.0.0.0
-          DB_PORT: 27017
-          DB_CONNECTION: mongodb
-          DB_USERNAME: root
-          DB_PASSWORD: root
-          DB_DATABASE: application
