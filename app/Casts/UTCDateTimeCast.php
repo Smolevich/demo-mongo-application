@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Date;
 use MongoDB\BSON\UTCDateTime;
 use InvalidArgumentException;
 
-class UTCDateTimeCaster implements CastsAttributes
+class UTCDateTimeCast implements CastsAttributes
 {
     /**
      * Cast the given value.
