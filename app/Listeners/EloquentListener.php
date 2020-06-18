@@ -29,10 +29,12 @@ class EloquentListener {
         }
 
         if ($continue) {
+            /** @var \Illuminate\Contracts\Auth\Factory|\Illuminate\Contracts\Auth\Guard|\Illuminate\Contracts\Auth\StatefulGuard $auth */
+            $auth = auth();
             ActivityLogs::create([
                 'fire_event' => $event,
-                'user_id' => auth()->id(),
-                'site_id' => auth()->user()->site_id
+                'user_id' => isset($auth) ? $auth->id() : '-1',
+                'site_id' => isset($auth) ? $auth->user()->site_id : '-1'
             ]);
         }
 
