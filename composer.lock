@@ -2173,7 +2173,6 @@
         },
         {
             "name": "symfony/http-foundation",
-<<<<<<< HEAD
             "version": "v5.1.2",
             "source": {
                 "type": "git",
@@ -2184,18 +2183,6 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/http-foundation/zipball/f93055171b847915225bd5b0a5792888419d8d75",
                 "reference": "f93055171b847915225bd5b0a5792888419d8d75",
-=======
-            "version": "v4.4.7",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/http-foundation.git",
-                "reference": "62f92509c9abfd1f73e17b8cf1b72c0bdac6611b"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/http-foundation/zipball/62f92509c9abfd1f73e17b8cf1b72c0bdac6611b",
-                "reference": "62f92509c9abfd1f73e17b8cf1b72c0bdac6611b",
->>>>>>> 5a154ec58ee878a0509119f8aeaef44aaa2959a3
                 "shasum": ""
             },
             "require": {
@@ -2243,11 +2230,7 @@
             ],
             "description": "Symfony HttpFoundation Component",
             "homepage": "https://symfony.com",
-<<<<<<< HEAD
             "time": "2020-06-15T06:52:54+00:00"
-=======
-            "time": "2020-03-30T14:07:33+00:00"
->>>>>>> 5a154ec58ee878a0509119f8aeaef44aaa2959a3
         },
         {
             "name": "symfony/http-kernel",
@@ -2590,7 +2573,6 @@
         },
         {
             "name": "symfony/polyfill-intl-idn",
-<<<<<<< HEAD
             "version": "v1.17.0",
             "source": {
                 "type": "git",
@@ -2601,18 +2583,6 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/polyfill-intl-idn/zipball/3bff59ea7047e925be6b7f2059d60af31bb46d6a",
                 "reference": "3bff59ea7047e925be6b7f2059d60af31bb46d6a",
-=======
-            "version": "v1.15.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/polyfill-intl-idn.git",
-                "reference": "47bd6aa45beb1cd7c6a16b7d1810133b728bdfcf"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-intl-idn/zipball/47bd6aa45beb1cd7c6a16b7d1810133b728bdfcf",
-                "reference": "47bd6aa45beb1cd7c6a16b7d1810133b728bdfcf",
->>>>>>> 5a154ec58ee878a0509119f8aeaef44aaa2959a3
                 "shasum": ""
             },
             "require": {
@@ -2626,11 +2596,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-<<<<<<< HEAD
                     "dev-master": "1.17-dev"
-=======
-                    "dev-master": "1.15-dev"
->>>>>>> 5a154ec58ee878a0509119f8aeaef44aaa2959a3
                 }
             },
             "autoload": {
@@ -2665,7 +2631,6 @@
                 "portable",
                 "shim"
             ],
-<<<<<<< HEAD
             "time": "2020-05-12T16:47:27+00:00"
         },
         {
@@ -2802,22 +2767,6 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/polyfill-php72/zipball/f048e612a3905f34931127360bdd2def19a5e582",
                 "reference": "f048e612a3905f34931127360bdd2def19a5e582",
-=======
-            "time": "2020-03-09T19:04:49+00:00"
-        },
-        {
-            "name": "symfony/polyfill-mbstring",
-            "version": "v1.15.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/polyfill-mbstring.git",
-                "reference": "81ffd3a9c6d707be22e3012b827de1c9775fc5ac"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/81ffd3a9c6d707be22e3012b827de1c9775fc5ac",
-                "reference": "81ffd3a9c6d707be22e3012b827de1c9775fc5ac",
->>>>>>> 5a154ec58ee878a0509119f8aeaef44aaa2959a3
                 "shasum": ""
             },
             "require": {
@@ -2826,11 +2775,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-<<<<<<< HEAD
                     "dev-master": "1.17-dev"
-=======
-                    "dev-master": "1.15-dev"
->>>>>>> 5a154ec58ee878a0509119f8aeaef44aaa2959a3
                 }
             },
             "autoload": {
@@ -2863,7 +2808,6 @@
                 "portable",
                 "shim"
             ],
-<<<<<<< HEAD
             "time": "2020-05-12T16:47:27+00:00"
         },
         {
@@ -2878,22 +2822,6 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/polyfill-php73/zipball/a760d8964ff79ab9bf057613a5808284ec852ccc",
                 "reference": "a760d8964ff79ab9bf057613a5808284ec852ccc",
-=======
-            "time": "2020-03-09T19:04:49+00:00"
-        },
-        {
-            "name": "symfony/polyfill-php72",
-            "version": "v1.15.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/polyfill-php72.git",
-                "reference": "37b0976c78b94856543260ce09b460a7bc852747"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-php72/zipball/37b0976c78b94856543260ce09b460a7bc852747",
-                "reference": "37b0976c78b94856543260ce09b460a7bc852747",
->>>>>>> 5a154ec58ee878a0509119f8aeaef44aaa2959a3
                 "shasum": ""
             },
             "require": {
@@ -2902,11 +2830,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-<<<<<<< HEAD
                     "dev-master": "1.17-dev"
-=======
-                    "dev-master": "1.15-dev"
->>>>>>> 5a154ec58ee878a0509119f8aeaef44aaa2959a3
                 }
             },
             "autoload": {
@@ -2942,11 +2866,7 @@
                 "portable",
                 "shim"
             ],
-<<<<<<< HEAD
             "time": "2020-05-12T16:47:27+00:00"
-=======
-            "time": "2020-02-27T09:26:54+00:00"
->>>>>>> 5a154ec58ee878a0509119f8aeaef44aaa2959a3
         },
         {
             "name": "symfony/polyfill-php80",
@@ -3476,11 +3396,7 @@
                 "debug",
                 "dump"
             ],
-<<<<<<< HEAD
             "time": "2020-05-30T20:35:19+00:00"
-=======
-            "time": "2020-01-04T13:00:46+00:00"
->>>>>>> 5a154ec58ee878a0509119f8aeaef44aaa2959a3
         },
         {
             "name": "tijsverkoyen/css-to-inline-styles",
@@ -5980,7 +5896,6 @@
         },
         {
             "name": "webmozart/assert",
-<<<<<<< HEAD
             "version": "1.9.0",
             "source": {
                 "type": "git",
@@ -5991,18 +5906,6 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/webmozart/assert/zipball/9dc4f203e36f2b486149058bade43c851dd97451",
                 "reference": "9dc4f203e36f2b486149058bade43c851dd97451",
-=======
-            "version": "1.6.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/webmozart/assert.git",
-                "reference": "573381c0a64f155a0d9a23f4b0c797194805b925"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/webmozart/assert/zipball/573381c0a64f155a0d9a23f4b0c797194805b925",
-                "reference": "573381c0a64f155a0d9a23f4b0c797194805b925",
->>>>>>> 5a154ec58ee878a0509119f8aeaef44aaa2959a3
                 "shasum": ""
             },
             "require": {
@@ -6010,12 +5913,8 @@
                 "symfony/polyfill-ctype": "^1.8"
             },
             "conflict": {
-<<<<<<< HEAD
                 "phpstan/phpstan": "<0.12.20",
                 "vimeo/psalm": "<3.9.1"
-=======
-                "vimeo/psalm": "<3.6.0"
->>>>>>> 5a154ec58ee878a0509119f8aeaef44aaa2959a3
             },
             "require-dev": {
                 "phpunit/phpunit": "^4.8.36 || ^7.5.13"
@@ -6042,57 +5941,7 @@
                 "check",
                 "validate"
             ],
-<<<<<<< HEAD
             "time": "2020-06-16T10:16:42+00:00"
-=======
-            "time": "2019-11-24T13:36:37+00:00"
-        },
-        {
-            "name": "webmozart/path-util",
-            "version": "2.3.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/webmozart/path-util.git",
-                "reference": "d939f7edc24c9a1bb9c0dee5cb05d8e859490725"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/webmozart/path-util/zipball/d939f7edc24c9a1bb9c0dee5cb05d8e859490725",
-                "reference": "d939f7edc24c9a1bb9c0dee5cb05d8e859490725",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.3",
-                "webmozart/assert": "~1.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^4.6",
-                "sebastian/version": "^1.0.1"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.3-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Webmozart\\PathUtil\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Bernhard Schussek",
-                    "email": "bschussek@gmail.com"
-                }
-            ],
-            "description": "A robust cross-platform utility for normalizing, comparing and modifying file paths.",
-            "time": "2015-12-17T08:42:14+00:00"
->>>>>>> 5a154ec58ee878a0509119f8aeaef44aaa2959a3
         }
     ],
     "aliases": [],
